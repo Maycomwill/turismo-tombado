@@ -6,26 +6,22 @@ import React, {
   HTMLAttributes,
 } from "react";
 import { motion } from "framer-motion";
-import Image1 from "../assets/5pontas/forte5pontas1.jpg";
-import Image2 from "../assets/5pontas/forte5pontas2.jpg";
-import Image3 from "../assets/5pontas/forte5pontas3.jpg";
-import Image4 from "../assets/5pontas/forte5pontas4.jpg";
 
 interface ICarouselProps extends HTMLAttributes<HTMLDivElement> {
   images: string[];
 }
 
 export function Carousel({ images }: ICarouselProps) {
-  const carousel = useRef(null);
+  const carousel = useRef<any>(null);
   const [width, setWidth] = useState(0);
-  // const images = [Image1, Image2, Image3, Image4];
+
 
   useEffect(() => {
     const screenWidth = window.screen.width
     console.log(screenWidth)
     if(screenWidth >= 600){
       setWidth(carousel.current?.scrollWidth - (carousel.current?.offsetWidth * 1.2));
-      
+
     } else {
       setWidth(carousel.current?.scrollWidth - (carousel.current?.offsetWidth * 1.45));
     }
