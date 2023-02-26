@@ -8,8 +8,10 @@ import Image3 from "../assets/5pontas/forte5pontas3.jpg";
 import Image4 from "../assets/5pontas/forte5pontas4.jpg";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 export function Forte5() {
+  const navigate = useNavigate()
   return (
     <div className="w-screen h-full">
       <Header />
@@ -53,6 +55,14 @@ export function Forte5() {
             <Text>Contato: 3355-9543 / 3355-3107 / 3355-9544</Text>
           </div>
         </div>
+      </div>
+      <div>
+      <button
+        onClick={() => navigate(-1)}
+        className="bg-pYellow-400 px-4 py-2 rounded-md"
+      >
+        <Text color="blue" weight="bold" className="uppercase" size="xlg">Voltar</Text>
+      </button>
       </div>
       <Footer />
     </div>
