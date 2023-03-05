@@ -28,10 +28,10 @@ export function Carousel({ images, className }: ICarouselProps) {
   }, []);
 
   return (
-    <div className={clsx("bg-blue-500 w-full m-auto", className)} >
+    <div className={clsx("w-full m-auto", className)} >
       <motion.div
       ref={carousel}
-      className="bg-red-600 max-w-[380px] md:max-w-[800px] m-auto px-4 overflow-hidden cursor-grab overflow-x-hidden"
+      className="max-w-[380px] md:max-w-[800px] m-auto px-4 overflow-hidden cursor-grab overflow-x-hidden"
       whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
