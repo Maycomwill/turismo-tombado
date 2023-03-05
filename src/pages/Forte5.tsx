@@ -15,19 +15,19 @@ export function Forte5() {
   const screenWidth = window.screen.width;
 
   return (
-    <div className="w-screen h-full">
+    <>
       <Header />
       <div className="text-center">
         <Text weight="bold" size="xlg">
           Forte das cinco pontas
         </Text>
-        <div className="my-4">
+
           <Carousel
             images={[Image1, Image2, Image3, Image4]}
-            className="mt-4"
+            className="my-4"
           />
-        </div>
-        <div className="w-screen flex items-center justify-center">
+
+        <div className="w-full flex items-center justify-center">
           <div className="max-w-[325px] md:max-w-[750px] mb-4 flex flex-col items-start justify-center text-justify">
             <Text paragraph="2">
               Forte de São Tiago das Cinco Pontas, mais conhecido como o forte
@@ -78,6 +78,6 @@ export function Forte5() {
         </div>
       )}
       <Footer />
-    </div>
+    </>
   );
 }

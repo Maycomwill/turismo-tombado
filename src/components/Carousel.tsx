@@ -2,19 +2,19 @@ import React, {
   useRef,
   useState,
   useEffect,
-  MutableRefObject,
   HTMLAttributes,
 } from "react";
 import { motion } from "framer-motion";
+import clsx from "clsx";
 
 interface ICarouselProps extends HTMLAttributes<HTMLDivElement> {
   images: string[];
+  className: string;
 }
 
-export function Carousel({ images }: ICarouselProps) {
+export function Carousel({ images, className }: ICarouselProps) {
   const carousel = useRef<any>(null);
   const [width, setWidth] = useState(0);
-
 
   useEffect(() => {
     const screenWidth = window.screen.width
@@ -28,10 +28,10 @@ export function Carousel({ images }: ICarouselProps) {
   }, []);
 
   return (
-    <div className="w-screen">
+    <div className={clsx("bg-blue-500 w-full m-auto", className)} >
       <motion.div
       ref={carousel}
-      className="w-fullmax-w-[380px] md:max-w-[800px] m-auto px-4 overflow-hidden cursor-grab overflow-x-hidden"
+      className="bg-red-600 max-w-[380px] md:max-w-[800px] m-auto px-4 overflow-hidden cursor-grab overflow-x-hidden"
       whileTap={{ cursor: "grabbing" }}
     >
       <motion.div

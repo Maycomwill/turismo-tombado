@@ -25,6 +25,11 @@ export function Button({
           "bg-orange-400": variant === "PRIMARY",
           "hover:bg-orange-500": variant === "PRIMARY",
         },
+        {
+          "text-white": variant === "SECONDARY",
+          "bg-red-500": variant === "SECONDARY",
+          "hover:bg-red-600": variant === "SECONDARY",
+        },
         className
       )}
       {...props}

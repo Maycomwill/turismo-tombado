@@ -6,7 +6,7 @@ interface ITextProps extends React.HTMLAttributes<HTMLSpanElement> {
   children: ReactNode;
   asChild?: boolean;
   className?: string;
-  color?: "blue" | "yellow" | "white" | "gray";
+  color?: "blue" | "orange" | "gray";
   weight?: "regular" | "bold" | "black";
   paragraph?: "1" | "2";
 }
@@ -24,8 +24,8 @@ function Text({
     <span
       className={clsx(
         {
-          "text-pBlue-500": color === "blue",
-          "text-pYellow-500": color === "yellow",
+          "text-blue-500": color === "blue",
+          "text-orange-500": color === "orange",
           "text-gray-900 dark:text-gray-100": color === "gray",
         },
         {
