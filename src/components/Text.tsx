@@ -8,7 +8,7 @@ interface ITextProps extends React.HTMLAttributes<HTMLSpanElement> {
   className?: string;
   color?: "blue" | "yellow" | "white" | "gray";
   weight?: "regular" | "bold" | "black";
-  paragraph?: "1" | "2"
+  paragraph?: "1" | "2";
 }
 
 function Text({
@@ -17,7 +17,8 @@ function Text({
   size = "md",
   children,
   weight = "regular",
-  paragraph
+  paragraph,
+  ...props
 }: ITextProps) {
   return (
     <span
@@ -45,10 +46,10 @@ function Text({
         },
         className
       )}
+      {...props}
     >
       {children}
     </span>
   );
 }
-
-export default Text;
+export default Text

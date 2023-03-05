@@ -1,17 +1,19 @@
-import React from "react";
-import Text from "../components/Text";
 import { Carousel } from "../components/Carousel";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { useNavigate } from "react-router-dom";
+import Text from "../components/Text";
+import { Button } from "../components/Button";
 
 import Image1 from "../assets/5pontas/forte5pontas1.jpg";
 import Image2 from "../assets/5pontas/forte5pontas2.jpg";
 import Image3 from "../assets/5pontas/forte5pontas3.jpg";
 import Image4 from "../assets/5pontas/forte5pontas4.jpg";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import { useNavigate } from "react-router-dom";
 
 export function Forte5() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const screenWidth = window.screen.width;
+
   return (
     <div className="w-screen h-full">
       <Header />
@@ -56,14 +58,25 @@ export function Forte5() {
           </div>
         </div>
       </div>
-      <div>
-      <button
-        onClick={() => navigate(-1)}
-        className="bg-pYellow-400 px-4 py-2 rounded-md"
-      >
-        <Text color="blue" weight="bold" className="uppercase" size="xlg">Voltar</Text>
-      </button>
-      </div>
+      {screenWidth <= 500 ? (
+        <div className="w-[25%] m-auto">
+          <Button
+            onClick={() => navigate(-1)}
+            className="bg-pYellow-400 px-4 py-2 rounded-md"
+          >
+            Voltar
+          </Button>
+        </div>
+      ) : (
+        <div className="w-[10%] m-auto">
+          <Button
+            onClick={() => navigate(-1)}
+            className="bg-pYellow-400 px-4 py-2 rounded-md"
+          >
+            Voltar
+          </Button>
+        </div>
+      )}
       <Footer />
     </div>
   );

@@ -4,10 +4,14 @@ import { Switch } from "./Switch";
 
 export function Header() {
   return (
-    <div className="w-screen flex items-center justify-between p-4">
-      <div className="w-12 h-12 bg-purple-500 text-center items-center justify-center flex">LOGO</div>
-      <Text>Turismo tombado</Text>
-      <Switch />
+    <div className="w-full flex items-center justify-between p-4 mb-4">
+      <div className="w-12 h-12 bg-orange-500 text-center items-center justify-center flex">
+        LOGO
+      </div>
+      <Text size="xlg" weight="black">HÓRUS</Text>
+      <div>
+        <Switch />
+      </div>
     </div>
   );
 }
