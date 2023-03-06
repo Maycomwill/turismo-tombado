@@ -3,7 +3,7 @@ import Text from "../components/Text";
 import { Header } from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/Button";
-import { Map, center } from "../components/Map";
+import { Map} from "../components/Map";
 import { Marker } from "@react-google-maps/api";
 
 export function Home() {
@@ -20,23 +20,13 @@ export function Home() {
               Aqui você encontrará seu próximo destino turístico histórico com
               toda a facilidade.
             </Text>
-            <Text>
+            <Text size="lg">
               Você pode navegar pelo mapa abaixo para encontrar alguns pontos
               históricos
             </Text>
           </div>
           <div className="mb-8 w-full h-full">
-            <Map>
-            <Marker
-            position={center}
-            options={{
-              label: {
-                text: "Marco-zero do Recife",
-                className: "point-marker",
-              },
-            }}
-          />
-            </Map>
+            <Map nome="Marco-zero do Recife" center={{lat: -8.063123361206603, lng: -34.87111791073427}}/>
           </div>
         </div>
         <Button onClick={() => navigate("/forte-5-pontas")}>
