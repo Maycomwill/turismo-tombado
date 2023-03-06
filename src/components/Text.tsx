@@ -23,6 +23,7 @@ function Text({
   return (
     <span
       className={clsx(
+        "text-justify",
         {
           "text-blue-500": color === "blue",
           "text-orange-500": color === "orange",
@@ -52,4 +53,4 @@ function Text({
     </span>
   );
 }
-export default Text
+export default Text;

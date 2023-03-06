@@ -9,6 +9,8 @@ import Image1 from "../assets/5pontas/forte5pontas1.jpg";
 import Image2 from "../assets/5pontas/forte5pontas2.jpg";
 import Image3 from "../assets/5pontas/forte5pontas3.jpg";
 import Image4 from "../assets/5pontas/forte5pontas4.jpg";
+import { Map, center } from "../components/Map";
+import { Marker } from "@react-google-maps/api";
 
 export function Forte5() {
   const navigate = useNavigate();
@@ -56,6 +58,19 @@ export function Forte5() {
             <br />
             <Text>Contato: 3355-9543 / 3355-3107 / 3355-9544</Text>
           </div>
+        </div>
+        <div className="w-full max-w-[50%] m-auto mb-4">
+          <Map>
+          <Marker
+            position={center}
+            options={{
+              label: {
+                text: "Marco-zero do Recife",
+                className: "point-marker",
+              },
+            }}
+          />
+          </Map>
         </div>
       </div>
       {screenWidth <= 500 ? (
