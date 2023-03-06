@@ -19,7 +19,7 @@ export function Forte5() {
   return (
     <>
       <Header />
-      <div className="text-center">
+      <div className="text-center mt-4">
         <Text weight="bold" size="xlg">
           Forte das cinco pontas
         </Text>

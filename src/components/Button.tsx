@@ -21,7 +21,7 @@ export function Button({
       className={clsx(
         "w-full h-10 rounded-sm uppercase font-black transition-colors duration-150",
         {
-          "text-blue-500": variant === "PRIMARY",
+          "text-gray-900": variant === "PRIMARY",
           "bg-orange-400": variant === "PRIMARY",
           "hover:bg-orange-500": variant === "PRIMARY",
         },

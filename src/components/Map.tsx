@@ -14,7 +14,6 @@ export function Map({ center, nome }: IMapProps) {
     googleMapsApiKey: "AIzaSyDADT7-NDOLB5-4JcyGQ3R2hhamxUxj3pc",
   });
 
-
   const [map, setMap] = React.useState(null);
 
   const onLoad = React.useCallback(function callback(map: any) {
@@ -33,38 +32,40 @@ export function Map({ center, nome }: IMapProps) {
   }, []);
 
   return (
-    <div className="max-w-[1000px] w-full h-[500px] m-auto">
+    <div className="max-w-[90%] m-auto bg-blue-500 rounded-md">
       {isLoaded ? (
-        <GoogleMap
-          mapContainerStyle={{ width: "100%", height: "100%" }}
-          center={{ lat: center.lat, lng: center.lng }}
-          zoom={15}
-          options={{
-            zoomControl: false,
-            styles: [
-              {
-                elementType: "labels",
-                featureType: "poi.*",
-                stylers: [{ visibility: "off" }],
-              },
-            ],
-          }}
-        >
-          {/* Child components, such as markers, info windows, etc. */}
-          <Marker
-            icon={{
-              url: Pin,
-              scale: 0.5,
-            }}
-            position={{ lat: center.lat, lng: center.lng }}
+        <div className="max-w-[95%] h-[500px] m-auto bg-blue-500 py-2">
+          <GoogleMap
+            mapContainerStyle={{ width: "100%", height: "100%" }}
+            center={{ lat: center.lat, lng: center.lng }}
+            zoom={15}
             options={{
-              label: {
-                text: nome,
-                className: "point-marker",
-              },
+              zoomControl: false,
+              styles: [
+                {
+                  elementType: "labels",
+                  featureType: "poi.*",
+                  stylers: [{ visibility: "off" }],
+                },
+              ],
             }}
-          />
-        </GoogleMap>
+          >
+            {/* Child components, such as markers, info windows, etc. */}
+            <Marker
+              icon={{
+                url: Pin,
+                scale: 0.5,
+              }}
+              position={{ lat: center.lat, lng: center.lng }}
+              options={{
+                label: {
+                  text: nome,
+                  className: "point-marker",
+                },
+              }}
+            />
+          </GoogleMap>
+        </div>
       ) : (
         <></>
       )}
