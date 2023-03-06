@@ -31,42 +31,42 @@ export function Header() {
             </div>
             <div className="w-full">
               <div className="uppercase flex items-center m-auto justify-between w-[80%]">
-                <a href="/">
+                <a  onClick={()=>navigate("/")}>
                   <Text
                     color="blue"
                     size="xlg"
                     weight="black"
-                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100"
+                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
                   >
                     Início
                   </Text>
                 </a>
-                <a href="/about">
+                <a onClick={()=>navigate("/about")}>
                   <Text
                     color="blue"
                     size="xlg"
                     weight="black"
-                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100"
+                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
                   >
                     Sobre
                   </Text>
                 </a>
-                <a href="/catalog">
+                <a onClick={()=>navigate("/catalog")}>
                   <Text
                     color="blue"
                     size="xlg"
                     weight="black"
-                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100"
+                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
                   >
                     Catálogo
                   </Text>
                 </a>
-                <a href="/contact">
+                <a onClick={()=>navigate("/contact")}>
                   <Text
                     color="blue"
                     size="xlg"
                     weight="black"
-                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100"
+                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
                   >
                     Contato
                   </Text>
