@@ -5,13 +5,12 @@ import Text from "./Text";
 import colors from "tailwindcss/colors";
 import { useTheme } from "../hooks/useTheme";
 
-interface IHamburguerProps extends ReactBurgerMenu {}
+// interface IHamburguerProps extends ReactBurgerMenu {}
 
 export function HamburguerMenu() {
   const navigate = useNavigate();
   const theme = useTheme();
   let styles = {};
-
 
   if (theme.theme === "dark") {
     styles = {
@@ -19,6 +18,7 @@ export function HamburguerMenu() {
         position: "relative",
         zIndex: "2",
         top: "0",
+        left: "0",
         width: "2.25em",
         height: "2.25em",
         display: "flex",
@@ -36,6 +36,7 @@ export function HamburguerMenu() {
         height: "2.25em",
         width: "2.25em",
         marginRight: "1em",
+        marginTop: '1.6em'
       },
       bmCross: {
         background: `${colors.orange[500]}`,
@@ -50,7 +51,7 @@ export function HamburguerMenu() {
       },
       bmMenu: {
         background: `${colors.gray[900]}`,
-        padding: "1.2em 1.6em 0",
+        padding: "1.6em 1.4em 0",
         fontSize: "1.4em",
       },
       bmMorphShape: {
@@ -94,6 +95,7 @@ export function HamburguerMenu() {
         height: "2.25em",
         width: "2.25em",
         marginRight: "1em",
+        marginTop: '1.6em'
       },
       bmCross: {
         background: `${colors.orange[500]}`,
@@ -108,7 +110,7 @@ export function HamburguerMenu() {
       },
       bmMenu: {
         background: `${colors.gray[200]}`,
-        padding: "1.2em 1.6em 0",
+        padding: "1.6em 1.4em 0",
         fontSize: "1.4em",
       },
       bmMorphShape: {
@@ -132,7 +134,7 @@ export function HamburguerMenu() {
   }
 
   return (
-    <Menu styles={styles} >
+    <Menu styles={styles}>
       <a
         id="home"
         className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
