@@ -3,6 +3,7 @@ import Text from "./Text";
 import { Switch } from "./Switch";
 import Logo from "../assets/Logo.svg";
 import { useNavigate } from "react-router-dom";
+import { HamburguerMenu } from "./HamburguerMenu";
 
 export function Header() {
   const screenWidth = window.screen.width;
@@ -13,7 +14,7 @@ export function Header() {
         <div className="w-screen border-b-2 border-blue-500">
           <div className="w-full flex items-center justify-between p-4">
             <div>
-              <Text>Menu</Text>
+              <HamburguerMenu />
             </div>
             <div className="hover:cursor-pointer" onClick={() => navigate("/")}>
               <img src={Logo} alt="Hórus Logo" className="w-12 h-12" />
@@ -31,7 +32,7 @@ export function Header() {
             </div>
             <div className="w-full">
               <div className="uppercase flex items-center m-auto justify-between w-[80%]">
-                <a  onClick={()=>navigate("/")}>
+                <a onClick={() => navigate("/")}>
                   <Text
                     color="blue"
                     size="xlg"
@@ -41,7 +42,7 @@ export function Header() {
                     Início
                   </Text>
                 </a>
-                <a onClick={()=>navigate("/about")}>
+                <a onClick={() => navigate("/about")}>
                   <Text
                     color="blue"
                     size="xlg"
@@ -51,7 +52,7 @@ export function Header() {
                     Sobre
                   </Text>
                 </a>
-                <a onClick={()=>navigate("/catalog")}>
+                <a onClick={() => navigate("/catalog")}>
                   <Text
                     color="blue"
                     size="xlg"
@@ -61,7 +62,7 @@ export function Header() {
                     Catálogo
                   </Text>
                 </a>
-                <a onClick={()=>navigate("/contact")}>
+                <a onClick={() => navigate("/contact")}>
                   <Text
                     color="blue"
                     size="xlg"

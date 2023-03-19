@@ -38,7 +38,7 @@ export function Map({ center, nome }: IMapProps) {
           <GoogleMap
             mapContainerStyle={{ width: "100%", height: "100%" }}
             center={{ lat: center.lat, lng: center.lng }}
-            zoom={15}
+            zoom={17}
             options={{
               zoomControl: false,
               styles: [

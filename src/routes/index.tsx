@@ -7,11 +7,11 @@ export function IndexRoutes() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="*"
-          element={<BlankPage />}
-        />
-        <Route path="/" element={<Home />}/>
+        <Route path="*" element={<BlankPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" />
+        <Route path="/catalog" />
+        <Route path="/contact" />
         <Route path="/forte-5-pontas" element={<Forte5 />} />
       </Routes>
     </Router>
