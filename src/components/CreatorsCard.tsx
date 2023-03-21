@@ -21,7 +21,7 @@ export function CreatorsCard({ name, links }: ICardProps) {
   return (
     <>
       {screenWidth <= 500 ? (
-        <div className="bg-blue-500 w-[85%] h-32 rounded-md items-center justify-center flex flex-col relative mb-4">
+        <div className="bg-blue-500 w-full px-8 pb-2 h-32 rounded-md items-center justify-center flex flex-col relative mb-4">
           <div className="absolute -top-[25%]">
             <img
               src={`${links.github}.png`}

@@ -8,8 +8,6 @@ import { CreatorsCard } from "../components/CreatorsCard";
 export function Contact() {
   const screenWidth = window.screen.width;
 
-
-
   return (
     <div>
       <Header />
@@ -20,7 +18,7 @@ export function Contact() {
             Formados pelos integrantes:
           </Text>
           {screenWidth <= 500 ? (
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 justify-center items-center">
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Eduarda Lays"}
