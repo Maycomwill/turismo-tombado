@@ -4,6 +4,7 @@ import Text from "../components/Text";
 import { Header } from "../components/Header";
 import { GithubIcon, InstagramIcon, Linkedin, TwitterIcon } from "lucide-react";
 import { CreatorsCard } from "../components/CreatorsCard";
+import { SocialButtons } from "../components/SocialButtons";
 
 export function Contact() {
   const screenWidth = window.screen.width;
@@ -22,55 +23,63 @@ export function Contact() {
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Eduarda Lays"}
-                  links={{
-                    github: "https://github.com/duda-http",
-                    instagram: "https://www.instagram.com/duda_l4/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/maycom-willams-22b66716b/",
-                  }}
+                  links={[
+                    {
+                      github: "https://github.com/duda-http",
+                      instagram: "https://www.instagram.com/duda_l4/",
+                      linkedIn:
+                        "https://www.linkedin.com/in/maycom-willams-22b66716b/",
+                    },
+                  ]}
                 />
               </div>
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Hugo Alexandre"}
-                  links={{
-                    github: "https://github.com/HugoAS007",
-                    instagram: "https://www.instagram.com/hugo_has_/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/hugo-alexandre-a85643217/",
-                  }}
+                  links={[
+                    {
+                      github: "https://github.com/HugoAS007",
+                      instagram: "https://www.instagram.com/hugo_has_/",
+                      linkedIn:
+                        "https://www.linkedin.com/in/hugo-alexandre-a85643217/",
+                    },
+                  ]}
                 />
               </div>
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Maycom Willams"}
-                  links={{
-                    github: "https://github.com/maycomwill",
-                    instagram: "https://www.instagram.com/maycomwill/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/maycom-willams-22b66716b/",
-                  }}
+                  links={[
+                    {
+                      github: "https://github.com/maycomwill",
+                      instagram: "https://www.instagram.com/maycomwill/",
+                      linkedIn:
+                        "https://www.linkedin.com/in/maycom-willams-22b66716b/",
+                    },
+                  ]}
                 />
               </div>
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Nathália Sousa"}
-                  links={{
-                    github: "https://github.com/Nathaliaraphaella",
-                    instagram: "https://www.instagram.com/nathalia.rsousa/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
-                  }}
+                  links={[
+                    {
+                      github: "https://github.com/Nathaliaraphaella",
+                      instagram: "https://www.instagram.com/nathalia.rsousa/",
+                      linkedIn:
+                        "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
+                    },
+                  ]}
                 />
               </div>
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Samara Luize"}
-                  links={{
-                    instagram: "https://www.instagram.com/_eclipsa._s/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
-                  }}
+                  links={[
+                    {
+                      instagram: "https://www.instagram.com/_eclipsa._s/",
+                    },
+                  ]}
                 />
               </div>
             </div>
@@ -79,55 +88,63 @@ export function Contact() {
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Eduarda Lays"}
-                  links={{
-                    github: "https://github.com/duda-http",
-                    instagram: "https://www.instagram.com/duda_l4/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/eduarda-lays-45a471264/",
-                  }}
+                  links={[
+                    {
+                      github: "https://github.com/duda-http",
+                      instagram: "https://www.instagram.com/duda_l4/",
+                      linkedIn:
+                        "https://www.linkedin.com/in/eduarda-lays-45a471264/",
+                    },
+                  ]}
                 />
               </div>
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Hugo Alexandre"}
-                  links={{
-                    github: "https://github.com/HugoAS007",
-                    instagram: "https://www.instagram.com/hugo_has_/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/hugo-alexandre-a85643217/",
-                  }}
+                  links={[
+                    {
+                      github: "https://github.com/HugoAS007",
+                      instagram: "https://www.instagram.com/hugo_has_/",
+                      linkedIn:
+                        "https://www.linkedin.com/in/hugo-alexandre-a85643217/",
+                    },
+                  ]}
                 />
               </div>
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Maycom Willams"}
-                  links={{
-                    github: "https://github.com/maycomwill",
-                    instagram: "https://www.instagram.com/maycomwill/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/maycom-willams-22b66716b/",
-                  }}
+                  links={[
+                    {
+                      github: "https://github.com/maycomwill",
+                      instagram: "https://www.instagram.com/maycomwill/",
+                      linkedIn:
+                        "https://www.linkedin.com/in/maycom-willams-22b66716b/",
+                    },
+                  ]}
                 />
               </div>
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Nathália Sousa"}
-                  links={{
-                    github: "https://github.com/Nathaliaraphaella",
-                    instagram: "https://www.instagram.com/nathalia.rsousa/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
-                  }}
+                  links={[
+                    {
+                      github: "https://github.com/Nathaliaraphaella",
+                      instagram: "https://www.instagram.com/nathalia.rsousa/",
+                      linkedIn:
+                        "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
+                    },
+                  ]}
                 />
               </div>
               <div className="flex justify-between items-center">
                 <CreatorsCard
                   name={"Samara Luize"}
-                  links={{
-                    instagram: "https://www.instagram.com/_eclipsa._s/",
-                    linkedIn:
-                      "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
-                  }}
+                  links={[
+                    {
+                      instagram: "https://www.instagram.com/_eclipsa._s/",
+                    },
+                  ]}
                 />
               </div>
             </div>

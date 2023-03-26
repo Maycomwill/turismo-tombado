@@ -9,7 +9,7 @@ interface ITextProps extends React.HTMLAttributes<HTMLSpanElement> {
   color?: "blue" | "orange" | "gray";
   weight?: "regular" | "bold" | "black";
   paragraph?: "1" | "2";
-  capitalize?: boolean
+  uppercase?: boolean
 }
 
 function Text({
@@ -19,7 +19,7 @@ function Text({
   children,
   weight = "regular",
   paragraph,
-  capitalize = false,
+  uppercase = false,
   ...props
 }: ITextProps) {
   return (
@@ -50,7 +50,7 @@ function Text({
           "indent-8": paragraph === "2",
         },
         {
-          "uppercase": capitalize === true,
+          "uppercase": uppercase === true,
         },
         className
       )}
