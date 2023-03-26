@@ -10,7 +10,7 @@ export function BlankPage() {
         <img src={RobotNotF} alt="404 Error" height={200} width={200} />
       </div>
       <div className="flex flex-col items-center justify-center gap-2 px-2">
-        <Text size="3xl" capitalize>
+        <Text size="3xl" uppercase>
           Erro 404
         </Text>
         <Text size="2xl">

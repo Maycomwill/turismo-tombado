@@ -140,28 +140,28 @@ export function HamburguerMenu() {
         className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
         onClick={() => navigate("/")}
       >
-        <Text size="3xl" capitalize>Home</Text>
+        <Text size="3xl" uppercase>Home</Text>
       </a>
       <a
         id="about"
         className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
         onClick={() => navigate("/about")}
       >
-        <Text size="3xl" capitalize>Sobre</Text>
+        <Text size="3xl" uppercase>Sobre</Text>
       </a>
       <a
         id="catalog"
         className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
         onClick={() => navigate("/catalog")}
       >
-        <Text size="3xl" capitalize>Catálogo</Text>
+        <Text size="3xl" uppercase>Catálogo</Text>
       </a>
       <a
         id="contact"
         className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
         onClick={() => navigate("/contact")}
       >
-        <Text size="3xl" capitalize>Contato</Text>
+        <Text size="3xl" uppercase>Contato</Text>
       </a>
     </Menu>
   );
