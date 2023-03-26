@@ -31,10 +31,11 @@ export function Header() {
               <img src={Logo} alt="Hórus Logo" className="w-12 h-12" />
             </div>
             <div className="w-full">
-              <div className="uppercase flex items-center m-auto justify-between w-[80%]">
+              <div className="flex items-center m-auto justify-between w-[80%]">
                 <a onClick={() => navigate("/")}>
                   <Text
                     color="blue"
+                    uppercase
                     size="xlg"
                     weight="black"
                     className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
@@ -45,6 +46,7 @@ export function Header() {
                 <a onClick={() => navigate("/about")}>
                   <Text
                     color="blue"
+                    uppercase
                     size="xlg"
                     weight="black"
                     className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
@@ -55,6 +57,7 @@ export function Header() {
                 <a onClick={() => navigate("/catalog")}>
                   <Text
                     color="blue"
+                    uppercase
                     size="xlg"
                     weight="black"
                     className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
@@ -65,6 +68,7 @@ export function Header() {
                 <a onClick={() => navigate("/contact")}>
                   <Text
                     color="blue"
+                    uppercase
                     size="xlg"
                     weight="black"
                     className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
