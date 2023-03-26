@@ -14,7 +14,7 @@ export function Contact() {
       <div className="px-4 pt-4">
         <div className="flex flex-col gap-8 mb-8">
           <Text size="xlg">
-            A plataforma hórus foi desenvolvida pelo grupo "Os Panteras.
+            A plataforma hórus foi desenvolvida pelo grupo "Os Panteras".
             Formados pelos integrantes:
           </Text>
           {screenWidth <= 500 ? (
@@ -23,7 +23,7 @@ export function Contact() {
                 <CreatorsCard
                   name={"Eduarda Lays"}
                   links={{
-                    github: "https://github.com/maycomwill",
+                    github: "https://github.com/duda-http",
                     instagram: "https://www.instagram.com/duda_l4/",
                     linkedIn:
                       "https://www.linkedin.com/in/maycom-willams-22b66716b/",
@@ -67,8 +67,7 @@ export function Contact() {
                 <CreatorsCard
                   name={"Samara Luize"}
                   links={{
-                    github: "https://github.com/Nathaliaraphaella",
-                    instagram: "https://www.instagram.com/nathalia.rsousa/",
+                    instagram: "https://www.instagram.com/_eclipsa._s/",
                     linkedIn:
                       "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
                   }}
@@ -81,7 +80,7 @@ export function Contact() {
                 <CreatorsCard
                   name={"Eduarda Lays"}
                   links={{
-                    github: "https://github.com/maycomwill",
+                    github: "https://github.com/duda-http",
                     instagram: "https://www.instagram.com/duda_l4/",
                     linkedIn:
                       "https://www.linkedin.com/in/eduarda-lays-45a471264/",
@@ -125,8 +124,7 @@ export function Contact() {
                 <CreatorsCard
                   name={"Samara Luize"}
                   links={{
-                    github: "https://github.com/Nathaliaraphaella",
-                    instagram: "https://www.instagram.com/nathalia.rsousa/",
+                    instagram: "https://www.instagram.com/_eclipsa._s/",
                     linkedIn:
                       "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
                   }}
