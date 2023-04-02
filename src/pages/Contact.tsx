@@ -15,7 +15,7 @@ export function Contact() {
       <div className="px-4 pt-4">
         <div className="flex flex-col gap-8 mb-8">
           <Text size="xlg">
-            A plataforma hórus foi desenvolvida pelo grupo "Os Panteras".
+            A plataforma hórus foi desenvolvida pela Equipe Hórus.
             Formados pelos integrantes:
           </Text>
           {screenWidth <= 500 ? (
