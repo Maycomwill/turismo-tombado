@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Catalog() {
+export function Services() {
   return (
     <div>Catalog</div>
   )

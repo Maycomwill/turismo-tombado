@@ -19,7 +19,7 @@ export function Button({
     <button
       type={type}
       className={clsx(
-        "w-full h-10 rounded-sm uppercase font-black transition-colors duration-150",
+        "w-full h-10 rounded-[4px] uppercase font-black transition-colors duration-150",
         {
           "text-gray-900": variant === "PRIMARY",
           "bg-orange-400": variant === "PRIMARY",

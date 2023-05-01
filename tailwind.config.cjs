@@ -5,16 +5,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        fontSize: {
-          xxs: 8,
-          xsm: 12,
-          sm: 14,
-          md: 16,
-          lg: 18,
-          xlg: 24,
-          '2xl': 28,
-          '3xl': 32
-        },
         gray: {
           100: '#f5f5f5',
           200: '#eeeeee',
@@ -50,6 +40,16 @@ module.exports = {
           800: '#642e09',
           900: '#321704'
         }
+      },
+      fontSize: {
+        xxs: 8,
+        xsm: 10,
+        sm: 14,
+        md: 16,
+        lg: 20,
+        xlg: 24,
+        '2xl': 28,
+        '3xl': 32
       }
     }
   },

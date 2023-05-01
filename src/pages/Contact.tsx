@@ -13,14 +13,16 @@ export function Contact() {
     <div>
       <Header />
       <div className="px-4 pt-4">
-        <div className="flex flex-col gap-8 mb-8">
-          <Text size="xlg">
+        <div className="flex flex-col">
+          <Text size="xlg" className="leading-6">
             A plataforma hórus foi desenvolvida pela Equipe Hórus.
-            Formados pelos integrantes:
+          </Text>
+          <Text size="xlg" className="mb-8">
+            Formada pelos integrantes:
           </Text>
           {screenWidth <= 500 ? (
             <div className="flex flex-col gap-8 justify-center items-center">
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Eduarda Lays"}
                   links={[
@@ -33,7 +35,7 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Hugo Alexandre"}
                   links={[
@@ -46,7 +48,7 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Maycom Willams"}
                   links={[
@@ -59,7 +61,7 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Nathália Sousa"}
                   links={[
@@ -72,7 +74,7 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Samara Luize"}
                   links={[
@@ -85,7 +87,7 @@ export function Contact() {
             </div>
           ) : (
             <div className="flex gap-8 flex-wrap items-center justify-center pt-4">
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Eduarda Lays"}
                   links={[
@@ -98,7 +100,7 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Hugo Alexandre"}
                   links={[
@@ -111,7 +113,7 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Maycom Willams"}
                   links={[
@@ -124,7 +126,7 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Nathália Sousa"}
                   links={[
@@ -137,7 +139,7 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div className="flex justify-between items-center">
+              <div>
                 <CreatorsCard
                   name={"Samara Luize"}
                   links={[

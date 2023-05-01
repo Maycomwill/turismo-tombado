@@ -4,7 +4,6 @@ import React, { ReactNode } from "react";
 interface ITextProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: "xsm" | "sm" | "md" | "lg" | "xlg" | "2xl" | "3xl";
   children: ReactNode;
-  asChild?: boolean;
   className?: string;
   color?: "blue" | "orange" | "gray";
   weight?: "regular" | "bold" | "black";
@@ -15,7 +14,7 @@ interface ITextProps extends React.HTMLAttributes<HTMLSpanElement> {
 function Text({
   color = "gray",
   className,
-  size = "sm",
+  size = "md",
   children,
   weight = "regular",
   paragraph,
@@ -43,7 +42,7 @@ function Text({
           "text-md md:text-lg": size === "lg",
           "text-lg md:text-xlg": size === "xlg",
           "text-xlg md:text-2xl": size === "2xl",
-          "text-2lg md:text-3xl": size === "3xl",
+          "text-2xl md:text-3xl": size === "3xl",
         },
         {
           "indent-4": paragraph === "1",

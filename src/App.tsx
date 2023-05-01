@@ -4,7 +4,7 @@ import "./styles/main.css";
 
 function App() {
   return (
-    <div className="w-screen min-w-screen min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900 scroll-smooth">
+    <div className="w-screen min-w-screen min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900 scroll-smooth overflow-x-clip">
         <IndexRoutes />
     </div>
   );

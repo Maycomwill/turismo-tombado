@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Text from "./Text";
 import colors from "tailwindcss/colors";
 import { useTheme } from "../hooks/useTheme";
+import { Switch } from "./Switch";
 
 // interface IHamburguerProps extends ReactBurgerMenu {}
 
@@ -36,7 +37,7 @@ export function HamburguerMenu() {
         height: "2.25em",
         width: "2.25em",
         marginRight: "1em",
-        marginTop: '1.6em'
+        marginTop: "1.6em",
       },
       bmCross: {
         background: `${colors.orange[500]}`,
@@ -95,7 +96,7 @@ export function HamburguerMenu() {
         height: "2.25em",
         width: "2.25em",
         marginRight: "1em",
-        marginTop: '1.6em'
+        marginTop: "1.6em",
       },
       bmCross: {
         background: `${colors.orange[500]}`,
@@ -137,32 +138,43 @@ export function HamburguerMenu() {
     <Menu styles={styles}>
       <a
         id="home"
-        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
+        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer w-[80%]"
         onClick={() => navigate("/")}
       >
-        <Text size="3xl" uppercase>Home</Text>
+        <Text size="md" uppercase>
+          Home
+        </Text>
       </a>
       <a
         id="about"
-        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
+        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer w-[80%]"
         onClick={() => navigate("/about")}
       >
-        <Text size="3xl" uppercase>Sobre</Text>
+        <Text size="md" uppercase>
+          Sobre
+        </Text>
       </a>
       <a
         id="catalog"
-        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
+        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer w-[80%]"
         onClick={() => navigate("/catalog")}
       >
-        <Text size="3xl" uppercase>Catálogo</Text>
+        <Text size="md" uppercase>
+          Catálogo
+        </Text>
       </a>
       <a
         id="contact"
-        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer"
+        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer w-[80%]"
         onClick={() => navigate("/contact")}
       >
-        <Text size="3xl" uppercase>Contato</Text>
+        <Text size="md" uppercase>
+          Contato
+        </Text>
       </a>
+      <div className=" w-[80%] block py-4">
+        <Switch />
+      </div>
     </Menu>
   );
 }

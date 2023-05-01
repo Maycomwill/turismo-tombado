@@ -95,8 +95,8 @@ export function CreatorsCard({ name, links }: ICardProps) {
     return (
       <>
         {screenWidth <= 500 ? (
-          <div className="bg-blue-500 w-full px-8 pb-2 h-32 rounded-md items-center justify-center flex flex-col relative mb-4">
-            <div className="absolute -top-[25%]">
+          <div className="bg-blue-500 w-full px-8 pb-2 h-36 rounded-md items-center justify-center flex flex-col relative mb-4">
+            <div className="absolute -top-[23%]">
               <img
                 src={`${links[0].github}.png`}
                 alt={`${name} Picture`}
@@ -111,8 +111,8 @@ export function CreatorsCard({ name, links }: ICardProps) {
             <div className="flex gap-8 pt-2">{handleButtons(links)}</div>
           </div>
         ) : (
-          <div className="bg-blue-500 w-full px-8 h-32 rounded-md items-center justify-center flex flex-col relative mb-4">
-            <div className="absolute -top-[25%]">
+          <div className="bg-blue-500 w-full px-8 h-36 rounded-md items-center justify-center flex flex-col relative mb-4 pb-2">
+            <div className="absolute -top-[23%]">
               <img
                 src={`${links[0].github}.png`}
                 alt={`${name} Picture`}
@@ -133,8 +133,8 @@ export function CreatorsCard({ name, links }: ICardProps) {
     return (
       <>
         {screenWidth <= 500 ? (
-          <div className="bg-blue-500 w-full px-8 pb-2 h-32 rounded-md items-center justify-center flex flex-col relative mb-4">
-            <div className="absolute -top-[25%]">
+          <div className="bg-blue-500 w-full px-8 pb-2 h-36 rounded-md items-center justify-center flex flex-col relative mb-4">
+            <div className="absolute -top-[23%]">
               <img
                 src={
                   "https://www.pngfind.com/pngs/m/676-6764065_default-profile-picture-transparent-hd-png-download.png"
@@ -151,8 +151,8 @@ export function CreatorsCard({ name, links }: ICardProps) {
             <div className="flex gap-8 pt-2">{handleButtons(links)}</div>
           </div>
         ) : (
-          <div className="bg-blue-500 w-full px-8 h-32 rounded-md items-center justify-center flex flex-col relative mb-4">
-            <div className="absolute -top-[25%]">
+          <div className="bg-blue-500 w-full px-8 h-36 rounded-md items-center justify-center flex flex-col relative mb-4 pb-2">
+            <div className="absolute -top-[23%]">
               <img
                 src={
                   "https://www.pngfind.com/pngs/m/676-6764065_default-profile-picture-transparent-hd-png-download.png"

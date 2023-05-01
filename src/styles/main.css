@@ -34,3 +34,23 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #95450d;
 }
+
+#rememberMe:checked ~ .check-1{
+  @apply text-opacity-100;
+  animation: check-animation 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes check-animation {
+  0%{
+    @apply transform scale-50 text-opacity-100;
+  }
+
+  50%{
+    @apply transform scale-150 text-opacity-100;
+  }
+
+  100%{
+    @apply transform scale-100 text-opacity-100;
+  }
+
+}
