@@ -155,15 +155,6 @@ export function HamburguerMenu() {
         </Text>
       </a>
       <a
-        id="catalog"
-        className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer w-[80%]"
-        onClick={() => navigate("/catalog")}
-      >
-        <Text size="md" uppercase>
-          Catálogo
-        </Text>
-      </a>
-      <a
         id="contact"
         className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 cursor-pointer w-[80%]"
         onClick={() => navigate("/contact")}

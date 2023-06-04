@@ -5,7 +5,7 @@ import { Footer } from "../components/Footer";
 
 export function BlankPage() {
   return (
-    <div className="flex flex-col gap-10 h-full items-center justify-start mt-28">
+    <div className="flex flex-col gap-10 h-screen items-center justify-center pb-12">
       <div>
         <img src={RobotNotF} alt="404 Error" height={200} width={200} />
       </div>

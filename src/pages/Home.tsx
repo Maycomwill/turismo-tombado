@@ -4,7 +4,6 @@ import { Header } from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/Button";
 import { Map } from "../components/Map";
-import { Marker } from "@react-google-maps/api";
 import { Footer } from "../components/Footer";
 
 export function Home() {
@@ -17,17 +16,17 @@ export function Home() {
       <div className="px-4 pt-4">
         <div>
           <div className="flex flex-col gap-2 mb-4">
-            <Text size="xlg">Bem vindo(a) ao Hórus</Text>
-            <Text size="lg">
+            <Text size="xlg" className="leading-tight">Bem vindo(a) ao Hórus</Text>
+            <Text size="lg" className="leading-relaxed">
               Aqui você encontrará seu próximo destino turístico histórico com
               toda a facilidade.
             </Text>
-            <Text size="lg">
+            <Text size="lg" className="leading-relaxed">
               Você pode navegar pelo mapa abaixo para encontrar alguns pontos
               históricos
             </Text>
           </div>
-          <div className="mb-8">
+          <div className="mb-8 w-full margin-auto">
             <Map nome="Marco-zero do Recife" center={{lat: -8.063123361206603, lng: -34.87111791073427}}/>
           </div>
         </div>

@@ -15,7 +15,7 @@ export function Login() {
     <div className="max-w-[99%] w-full h-screen flex flex-col items-center justify-center py-8">
       <div className="h-full w-full flex flex-col gap-4 justify-start items-center">
         <div className="hover:cursor-pointer" onClick={() => navigate("/")}>
-          <img src={Logo} alt="Hórus Logo" className="w-20 h-20" />
+          <img src={Logo} alt="Hórus Logo" className="w-28 h-w-28" />
         </div>
         <form
           action=""
@@ -108,7 +108,7 @@ export function Login() {
                 <Check
                   className="
                   absolute
-                  md:top-[86%]
+                  md:top-[90%]
                   md:left-4
                   text-blue-500
                   text-opacity-0

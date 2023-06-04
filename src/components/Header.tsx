@@ -27,26 +27,16 @@ export function Header() {
           </div>
         </div>
       ) : (
-        <div className="border-b-2 border-blue-500 overscroll-x-none">
-          <div className="max-w-[98%] flex items-center justify-between p-4">
+        <div className="border-b-2 border-blue-500 overscroll-x-none ">
+          <div className="flex items-center justify-between p-4">
             <div className="flex items-center justify-start gap-8 w-[50%]">
               <div
                 className="hover:cursor-pointer"
                 onClick={() => navigate("/")}
               >
-                <img src={Logo} alt="Hórus Logo" className="w-12 h-12" />
+                <img src={Logo} alt="Hórus Logo" className="w-14 h-14" />
               </div>
               <div className="flex items-center justify-start w-[80%] gap-12">
-                <a onClick={() => navigate("/about")}>
-                  <Text
-                    color="blue"
-                    size="md"
-                    weight="black"
-                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer text-"
-                  >
-                    Empresa
-                  </Text>
-                </a>
                 <a onClick={() => navigate("/catalog")}>
                   <Text
                     color="blue"
@@ -55,6 +45,16 @@ export function Header() {
                     className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
                   >
                     Serviços
+                  </Text>
+                </a>
+                <a onClick={() => navigate("/about")}>
+                  <Text
+                    color="blue"
+                    size="md"
+                    weight="black"
+                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
+                  >
+                    Empresa
                   </Text>
                 </a>
                 <a onClick={() => navigate("/contact")}>
@@ -73,7 +73,9 @@ export function Header() {
               <Button className="px-4" onClick={() => navigate("/login")}>
                 Login
               </Button>
-            <div><ThemeSettings /></div>
+              <div>
+                <ThemeSettings />
+              </div>
             </div>
           </div>
         </div>

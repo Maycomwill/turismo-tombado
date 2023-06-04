@@ -14,11 +14,10 @@ export function Contact() {
       <Header />
       <div className="px-4 pt-4">
         <div className="flex flex-col">
-          <Text size="xlg" className="leading-6">
-            A plataforma hórus foi desenvolvida pela Equipe Hórus.
-          </Text>
-          <Text size="xlg" className="mb-8">
-            Formada pelos integrantes:
+          <Text size="xlg" className="leading-tight mb-12">
+            Esta plataforma foi desenvolvida com o esforço e dedicação da <span className="font-bold bg-gradient-120 from-blue-400 via-rose-500 to-orange-500 bg-no-repeat text-transparent bg-clip-text cursor-default">Equipe Hórus</span> {" "}
+            {/* <span className="font-bold bg-gradient-120 from-blue-400 via-rose-500 to-orange-500 bg-no-repeat bg-bottom bg-[length:100%_4px] hover:bg-[length:100%_100%] transition-[background-size] cursor-default">Equipe Hórus</span> */}
+            formada pelos integrantes:
           </Text>
           {screenWidth <= 500 ? (
             <div className="flex flex-col gap-8 justify-center items-center">
@@ -74,16 +73,6 @@ export function Contact() {
                   ]}
                 />
               </div>
-              <div>
-                <CreatorsCard
-                  name={"Samara Luize"}
-                  links={[
-                    {
-                      instagram: "https://www.instagram.com/_eclipsa._s/",
-                    },
-                  ]}
-                />
-              </div>
             </div>
           ) : (
             <div className="flex gap-8 flex-wrap items-center justify-center pt-4">
@@ -135,16 +124,6 @@ export function Contact() {
                       instagram: "https://www.instagram.com/nathalia.rsousa/",
                       linkedIn:
                         "https://www.linkedin.com/in/nath%C3%A1lia-sousa-980438244/",
-                    },
-                  ]}
-                />
-              </div>
-              <div>
-                <CreatorsCard
-                  name={"Samara Luize"}
-                  links={[
-                    {
-                      instagram: "https://www.instagram.com/_eclipsa._s/",
                     },
                   ]}
                 />

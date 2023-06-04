@@ -10,13 +10,13 @@ export function About() {
   const screenWidth = window.screen.width;
 
   return (
-    <div>
+    <div className="h-screen">
       <Header />
       <div className="px-4 pt-4">
         <div className="flex flex-col gap-2 mb-4">
-          <Text size="xlg">Bem vindo(a) ao Hórus</Text>
+          <Text size="xlg" className="leading-tight">Bem vindo(a) ao Hórus</Text>
           {screenWidth <= 500 ? (
-            <div>
+            <div className="leading-relaxed">
               <Text size="lg" paragraph="2">
                 Esta plataforma foi desenvolvida como parte do Projeto Integrado
                 no curso de Desenvolvimento de Sistemas no ETE - José David Gil
@@ -40,7 +40,7 @@ export function About() {
               </Text>
             </div>
           ) : (
-            <div>
+            <div className="leading-relaxed">
               <Text size="lg">
                 Esta plataforma foi desenvolvida como parte do Projeto Integrado
                 no curso de Desenvolvimento de Sistemas no ETE - José David Gil

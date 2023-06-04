@@ -32,9 +32,9 @@ export function Map({ center, nome }: IMapProps) {
   }, []);
 
   return (
-    <div className="max-w-[90%] m-auto bg-blue-500 rounded-md">
+    <div className="flex items-center justify-center bg-blue-500 rounded-md">
       {isLoaded ? (
-        <div className="max-w-[95%] h-[500px] m-auto bg-blue-500 py-2">
+        <div className="w-full h-[500px] m-auto p-2">
           <GoogleMap
             mapContainerStyle={{ width: "100%", height: "100%" }}
             center={{ lat: center.lat, lng: center.lng }}
