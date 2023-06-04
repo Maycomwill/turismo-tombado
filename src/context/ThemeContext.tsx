@@ -12,13 +12,13 @@ const getInitialTheme = () => {
       return storedPrefs;
     }
 
-    const userMedia = window.matchMedia("(prefers-color-scheme: dark)");
+    const userMedia = window.matchMedia("(prefers-color-scheme: light)");
     if (userMedia.matches) {
-      return "dark";
+      return "light";
     }
   }
 
-  return "light"; // light theme as the default;
+  return "dark"; // dark theme as the default;
 };
 
 export const ThemeContext = createContext({} as switchProps);
