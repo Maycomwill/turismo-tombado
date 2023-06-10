@@ -11,17 +11,17 @@ export function Home() {
   const screenWidth = window.screen.width;
 
   return (
-    <div>
+    <div className="min-h-screen">
       <Header />
       <div className="px-4 pt-4">
         <div>
           <div className="flex flex-col gap-2 mb-4">
-            <Text size="xlg" className="leading-tight">Bem vindo(a) ao Hórus</Text>
-            <Text size="lg" className="leading-relaxed">
+            <Text size="lg" className="leading-tight">Bem vindo(a) ao Hórus</Text>
+            <Text size="md" className="leading-relaxed">
               Aqui você encontrará seu próximo destino turístico histórico com
               toda a facilidade.
             </Text>
-            <Text size="lg" className="leading-relaxed">
+            <Text size="md" className="leading-relaxed">
               Você pode navegar pelo mapa abaixo para encontrar alguns pontos
               históricos
             </Text>

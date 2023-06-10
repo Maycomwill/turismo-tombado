@@ -16,11 +16,10 @@ export function BlankPage() {
         <Text size="2xl">
           Aparentemente, você tentou acessar uma página inexistente, por favor,
           volte a{" "}
-          <a
-            className="text-orange-500 hover:border-b-2 hover:border-orange-500 focus:border-blue-500 focus:text-blue-500"
-            href="/"
-          >
-            página inicial
+          <a href="/">
+            <span className="bg-gradient-120 from-blue-400 via-rose-500 to-orange-500 bg-no-repeat bg-bottom bg-[length:100%_10%] hover:bg-[length:100%_100%] hover:bg-opacity-50 transition-[background-size] duration-200 cursor-default">
+              página inicial
+            </span>
           </a>
         </Text>
       </div>

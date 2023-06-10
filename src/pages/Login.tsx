@@ -103,6 +103,7 @@ export function Login() {
                   rounded-md
                   focus:outline-none
                   p-2
+                  relative
                 "
                 />
                 <Check

@@ -11,7 +11,7 @@ export function Header() {
   return (
     <>
       {screenWidth <= 500 ? (
-        <div className="w-full border-b-2 border-blue-500">
+        <div className="w-full">
           <div className="w-full flex items-center justify-between p-4">
             <div>
               <HamburguerMenu />
@@ -27,7 +27,7 @@ export function Header() {
           </div>
         </div>
       ) : (
-        <div className="border-b-2 border-blue-500 overscroll-x-none ">
+        <div>
           <div className="flex items-center justify-between p-4">
             <div className="flex items-center justify-start gap-8 w-[50%]">
               <div
@@ -54,7 +54,7 @@ export function Header() {
                     weight="black"
                     className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
                   >
-                    Empresa
+                    Sobre
                   </Text>
                 </a>
                 <a onClick={() => navigate("/contact")}>

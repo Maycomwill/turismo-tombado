@@ -1,22 +1,19 @@
-import React from "react";
 import { Footer } from "../components/Footer";
 import Text from "../components/Text";
 import { Header } from "../components/Header";
-import { GithubIcon, InstagramIcon, Linkedin, TwitterIcon } from "lucide-react";
 import { CreatorsCard } from "../components/CreatorsCard";
-import { SocialButtons } from "../components/SocialButtons";
 
 export function Contact() {
   const screenWidth = window.screen.width;
 
   return (
-    <div>
+    <div className="min-h-screen">
       <Header />
       <div className="px-4 pt-4">
         <div className="flex flex-col">
-          <Text size="xlg" className="leading-tight mb-12">
-            Esta plataforma foi desenvolvida com o esforço e dedicação da <span className="font-bold bg-gradient-120 from-blue-400 via-rose-500 to-orange-500 bg-no-repeat text-transparent bg-clip-text cursor-default">Equipe Hórus</span> {" "}
-            {/* <span className="font-bold bg-gradient-120 from-blue-400 via-rose-500 to-orange-500 bg-no-repeat bg-bottom bg-[length:100%_4px] hover:bg-[length:100%_100%] transition-[background-size] cursor-default">Equipe Hórus</span> */}
+          <Text size="lg" className="leading-tight mb-12 ">
+            Esta plataforma foi desenvolvida com o esforço e dedicação da <span className="font-bold bg-gradient-120 from-blue-400 via-rose-500 to-orange-500 bg-no-repeat text-transparent bg-clip-text">Equipe Hórus</span> {" "}
+
             formada pelos integrantes:
           </Text>
           {screenWidth <= 500 ? (
