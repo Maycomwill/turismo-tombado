@@ -62,9 +62,9 @@ export function Forte5() {
           </div>
         </div>
         {screenWidth <= 500 ? (<div className="w-full max-w-[95%] m-auto mb-4">
-          <Map nome={"Forte 5 pontas"} center={{lat: -8.071725227284393, lng: -34.88086888487637}}/>
+          <Map type="secondary" name="Forte 5 pontas" center={{lat: -8.071725227284393, lng: -34.88086888487637}}/>
         </div>) : (<div className="w-full max-w-[50%] m-auto mb-4">
-          <Map nome={"Forte 5 pontas"} center={{lat: -8.071725227284393, lng: -34.88086888487637}}/>
+          <Map type="secondary" name="Forte 5 pontas" center={{lat: -8.071725227284393, lng: -34.88086888487637}}/>
         </div>)}
       </div>
       {screenWidth <= 500 ? (

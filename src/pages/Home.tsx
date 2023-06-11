@@ -27,7 +27,7 @@ export function Home() {
             </Text>
           </div>
           <div className="mb-8 w-full margin-auto">
-            <Map nome="Marco-zero do Recife" center={{lat: -8.063123361206603, lng: -34.87111791073427}}/>
+            <Map type="primary" name="Marco-zero do Recife" center={{lat: -8.063123361206603, lng: -34.87111791073427}}/>
           </div>
         </div>
 

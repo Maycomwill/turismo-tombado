@@ -5,13 +5,14 @@ import Pin from "../assets/Pin.svg";
 
 interface IMapProps {
   center: { lat: number; lng: number };
-  nome: string;
+  name: string;
+  type: "primary" | "secondary";
 }
 
-export function Map({ center, nome }: IMapProps) {
+export function Map({ center, name, type }: IMapProps) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyDADT7-NDOLB5-4JcyGQ3R2hhamxUxj3pc",
+    googleMapsApiKey: "AIzaSyBxTW9_fgLhofNn8ULI1vzZkeRoKsmpCDo",
   });
 
   const [map, setMap] = React.useState(null);
@@ -31,44 +32,77 @@ export function Map({ center, nome }: IMapProps) {
     setMap(null);
   }, []);
 
-  return (
-    <div className="flex items-center justify-center bg-blue-500 rounded-md">
-      {isLoaded ? (
-        <div className="w-full h-[500px] m-auto p-2">
-          <GoogleMap
-            mapContainerStyle={{ width: "100%", height: "100%" }}
-            center={{ lat: center.lat, lng: center.lng }}
-            zoom={17}
-            options={{
-              zoomControl: false,
-              styles: [
-                {
-                  elementType: "labels",
-                  featureType: "poi.*",
-                  stylers: [{ visibility: "off" }],
-                },
-              ],
-            }}
-          >
-            {/* Child components, such as markers, info windows, etc. */}
-            <Marker
-              icon={{
-                url: Pin,
-                scale: 0.5,
-              }}
-              position={{ lat: center.lat, lng: center.lng }}
+  if(type == "primary"){
+    return (
+      <div className="flex items-center justify-center bg-blue-500 rounded-md">
+        {isLoaded ? (
+          <div className="w-full h-[500px] m-auto p-2">
+            <GoogleMap
+              mapContainerStyle={{ width: "100%", height: "100%" }}
+              center={{ lat: center.lat, lng: center.lng }}
+              zoom={17}
               options={{
-                label: {
-                  text: nome,
-                  className: "point-marker",
-                },
+                zoomControl: true,
+                styles: [
+                  {
+                    elementType: "labels",
+                    featureType: "poi.*",
+                    stylers: [{ visibility: "off" }],
+                  },
+                  {
+                    elementType: "labels",
+                    featureType: "road",
+                    stylers: [{ visibility: "on" }],
+                  },
+                  {
+                    elementType: "labels",
+                    featureType: "poi.medical",
+                    stylers: [{ visibility: "on" }],
+                  },
+                ],
               }}
-            />
-          </GoogleMap>
-        </div>
-      ) : (
-        <></>
-      )}
-    </div>
-  );
+            >
+              {/* Child components, such as markers, info windows, etc. */}
+              <Marker
+                icon={{
+                  url: Pin,
+                  scale: 0.5,
+                }}
+                position={{ lat: center.lat, lng: center.lng }}
+                options={{
+                  label: {
+                    text: name,
+                    className: "point-marker",
+                  },
+                }}
+              />
+            </GoogleMap>
+          </div>
+        ) : (
+          <></>
+        )}
+      </div>
+    );
+  } else{
+    return (
+      <div className="flex items-center justify-center bg-blue-500 rounded-md">
+        {isLoaded ? (
+          <div className="w-full h-[500px] m-auto p-2">
+            <GoogleMap
+              mapContainerStyle={{ width: "100%", height: "100%" }}
+              center={{ lat: center.lat, lng: center.lng }}
+              zoom={17}
+              options={{
+                zoomControl: true,
+              }}
+            >
+              {/* Child components, such as markers, info windows, etc. */}
+            </GoogleMap>
+          </div>
+        ) : (
+          <></>
+        )}
+      </div>
+    );
+  }
 }
