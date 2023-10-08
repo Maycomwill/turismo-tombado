@@ -109,7 +109,8 @@ export function Login() {
                 <Check
                   className="
                   absolute
-                  md:top-[90%]
+                  md:top-[95]
+                  md:bottom-[10]
                   md:left-4
                   text-blue-500
                   text-opacity-0
@@ -118,6 +119,7 @@ export function Login() {
                   duration-150
                 "
                 />
+
                 <Text>Manter logado</Text>
               </label>
             </div>

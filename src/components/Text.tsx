@@ -36,8 +36,8 @@ function Text({
           "font-black": weight === "black",
         },
         {
-          "text-xxs md:text-xsm": size === "xsm",
-          "text-xsm md:text-sm": size === "sm",
+          "text-xsm": size === "xsm",
+          "text-sm": size === "sm",
           "text-sm md:text-md": size === "md",
           "text-md md:text-lg": size === "lg",
           "text-lg md:text-xlg": size === "xlg",
