@@ -47,6 +47,20 @@ export function Contact() {
             </div>
             <div>
               <CreatorsCard
+                name={"Evellyn Amêndoa"}
+                links={[
+                  {
+                    github: "https://github.com/evellynamelia",
+                    instagram: "https://www.instagram.com/evllynzx/",
+                    linkedIn:
+                      "https://www.linkedin.com/in/evellyn-am%C3%A9lia-7aaa3b205/",
+                  },
+                ]}
+              />
+            </div>
+
+            <div>
+              <CreatorsCard
                 name={"Hugo Alexandre"}
                 links={[
                   {

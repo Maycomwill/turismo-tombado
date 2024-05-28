@@ -4,45 +4,58 @@ import { useNavigate } from "react-router-dom";
 import { HamburguerMenu } from "./HamburguerMenu";
 import { Button } from "./Button";
 import { ThemeSettings } from "./ThemeSettings";
+import useAuth from "../hooks/useAuth";
 
 export function Header() {
   const screenWidth = window.screen.width;
+  const { userData, logout } = useAuth();
   const navigate = useNavigate();
   return (
     <>
       {screenWidth <= 500 ? (
         <div className="w-full">
-          <div className="w-full flex items-center justify-between p-4">
+          <div className="flex w-full items-center justify-between p-4">
             <div>
               <HamburguerMenu />
             </div>
             <div className="hover:cursor-pointer" onClick={() => navigate("/")}>
-              <img src={Logo} alt="Hórus Logo" className="w-12 h-12" />
+              <img src={Logo} alt="Hórus Logo" className="h-12 w-12" />
             </div>
             <div>
-              <Button className="px-2" onClick={() => navigate("/login")}>
-                Login
-              </Button>
+              {userData ? (
+                <div className="group relative flex flex-col items-center ">
+                <Text weight="bold" uppercase size="lg">
+                  {userData.first_name}
+                </Text>
+                <div className="hidden absolute -bottom-10 w-full transition-all duration-150 ease-in-out group-hover:block">
+                  <Button onClick={logout}>Sair</Button>
+                </div>
+              </div>
+              ) : (
+                <Button className="px-2" onClick={() => navigate("/login")}>
+                  Login
+                </Button>
+              )}
             </div>
           </div>
         </div>
       ) : (
         <div>
           <div className="flex items-center justify-between p-4">
-            <div className="flex items-center justify-start gap-8 w-[50%]">
+            <div className="flex w-[50%] items-center justify-start gap-8">
               <div
                 className="hover:cursor-pointer"
                 onClick={() => navigate("/")}
               >
-                <img src={Logo} alt="Hórus Logo" className="w-14 h-14" />
+                <img src={Logo} alt="Hórus Logo" className="h-14 w-14" />
               </div>
-              <div className="flex items-center justify-start w-[80%] gap-12">
+              <div className="flex w-[80%] items-center justify-start gap-12">
                 <a onClick={() => navigate("/catalog")}>
                   <Text
                     color="blue"
                     size="md"
                     weight="black"
-                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
+                    className="border-b-2 border-[#00000000] transition-colors duration-100 hover:cursor-pointer hover:border-b-2 hover:border-orange-500 hover:text-orange-500"
                   >
                     Serviços
                   </Text>
@@ -52,7 +65,7 @@ export function Header() {
                     color="blue"
                     size="md"
                     weight="black"
-                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
+                    className="border-b-2 border-[#00000000] transition-colors duration-100 hover:cursor-pointer hover:border-b-2 hover:border-orange-500 hover:text-orange-500"
                   >
                     Sobre
                   </Text>
@@ -62,7 +75,7 @@ export function Header() {
                     color="blue"
                     size="md"
                     weight="black"
-                    className="hover:text-orange-500 border-b-2 border-[#00000000] hover:border-b-2 hover:border-orange-500 transition-colors duration-100 hover:cursor-pointer"
+                    className="border-b-2 border-[#00000000] transition-colors duration-100 hover:cursor-pointer hover:border-b-2 hover:border-orange-500 hover:text-orange-500"
                   >
                     Contato
                   </Text>
@@ -70,9 +83,20 @@ export function Header() {
               </div>
             </div>
             <div className="flex items-center justify-center gap-4">
-              <Button className="px-4" onClick={() => navigate("/login")}>
-                Login
-              </Button>
+              {userData ? (
+                <div className="group relative flex flex-col items-center ">
+                  <Text weight="bold" uppercase size="lg">
+                    {userData.first_name}
+                  </Text>
+                  <div className="hidden absolute -bottom-10 w-full transition-all duration-150 ease-in-out group-hover:block">
+                    <Button onClick={logout}>Sair</Button>
+                  </div>
+                </div>
+              ) : (
+                <Button className="px-2" onClick={() => navigate("/login")}>
+                  Login
+                </Button>
+              )}
               <div>
                 <ThemeSettings />
               </div>

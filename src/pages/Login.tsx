@@ -3,47 +3,57 @@ import Logo from "../assets/Logo.svg";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/Button";
 import { Check, Lock, Mail } from "lucide-react";
-import { CustomInput } from "../components/Input";
-import { useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+import { Input } from "../components/Input";
+import useAuth from "../hooks/useAuth";
 
 export function Login() {
   const navigate = useNavigate();
   const [userMail, setUserMail] = useState<string>("");
   const [userPassword, setUserPassword] = useState<string>("");
+  const [reminder, setReminder] = useState(false);
+  const { auth, login } = useAuth();
+
+  if(auth === true){
+    window.location.replace("/")
+  }
+
+  function handleLogin(e: FormEvent) {
+    e.preventDefault();
+    login({ email: userMail, password: userPassword, reminder });
+    setReminder(false);
+    setUserMail("");
+    setUserPassword("");
+  }
 
   return (
-    <div className="max-w-[99%] w-full h-screen flex flex-col items-center justify-center py-8">
-      <div className="h-full w-full flex flex-col gap-4 justify-start items-center">
+    <div className="flex h-screen w-full max-w-[99%] flex-col items-center justify-center py-8">
+      <div className="flex h-full w-full flex-col items-center justify-start gap-4">
         <div className="hover:cursor-pointer" onClick={() => navigate("/")}>
-          <img src={Logo} alt="Hórus Logo" className="w-28 h-w-28" />
+          <img src={Logo} alt="Hórus Logo" className="h-w-28 w-28" />
         </div>
         <form
-          action=""
           className="
             mt-4
-            pt-4
             flex
-            flex-col
-            gap-4
-            px-4
-            bg-gray-100
-            dark:bg-gray-900
-            drop-shadow-[0_15px_12px_rgba(0,0,0,0.25)]
-            dark:drop-shadow-[0px_15px_12px_rgba(255,255,255,0.05)]
-            rounded-2xl
             h-[65%]
-            md:h-[70%]
             w-[80%]
             max-w-[80%]
-            md:w-[30%]
-            md:max-w-[30%]
+            flex-col
+            gap-4
+            rounded-2xl
+            bg-gray-100
+            px-4
+            pt-4
+            drop-shadow-[0_15px_12px_rgba(0,0,0,0.25)]
+            dark:bg-gray-900
+            dark:drop-shadow-[0px_15px_12px_rgba(255,255,255,0.05)]
+            md:w-[50%]
+            lg:h-[70%]
+            lg:w-[35%]
+            lg:max-w-[35%]
           "
-          onSubmit={(e) => {
-            e.preventDefault();
-            setUserMail("");
-            setUserPassword("");
-            console.log("Login Test");
-          }}
+          onSubmit={handleLogin}
         >
           <div className="text-center">
             <Text size="2xl" weight="bold">
@@ -51,11 +61,11 @@ export function Login() {
             </Text>
           </div>
           <div className="flex flex-col gap-1">
-            <CustomInput.Root for="user-email" label="E-mail:">
-              <CustomInput.Icon>
+            <Input.Root for="user-email" label="E-mail:">
+              <Input.Icon>
                 <Mail />
-              </CustomInput.Icon>
-              <CustomInput.Input
+              </Input.Icon>
+              <Input.Content
                 autoComplete="false"
                 type="text"
                 required
@@ -64,14 +74,14 @@ export function Login() {
                 id="user-email"
                 placeholder="Digite o seu email"
               />
-            </CustomInput.Root>
+            </Input.Root>
           </div>
           <div className="flex flex-col gap-1">
-            <CustomInput.Root for="user-password" label="Senha:">
-              <CustomInput.Icon>
+            <Input.Root for="user-password" label="Senha:">
+              <Input.Icon>
                 <Lock />
-              </CustomInput.Icon>
-              <CustomInput.Input
+              </Input.Icon>
+              <Input.Content
                 type="password"
                 required
                 onChange={(e) => setUserPassword(e.target.value)}
@@ -80,43 +90,47 @@ export function Login() {
                 id="user-password"
                 placeholder="Digite sua senha"
               />
-            </CustomInput.Root>
+            </Input.Root>
           </div>
           <div>
             <Button type="submit">Login</Button>
           </div>
-          <div className="w-full flex flex-col md:flex-row gap-2 items-center justify-between md:mt-2">
-            <div className="flex gap-1 items-center justify-center">
+          <div className="flex w-full flex-col items-center justify-between gap-2 md:mt-2 md:flex-row">
+            <div className="flex items-center justify-center gap-1">
               <label htmlFor="rememberMe" className="flex items-center gap-1">
                 <input
+                  checked={reminder}
+                  onChange={() => {
+                    setReminder(!reminder);
+                  }}
                   type="checkbox"
                   id="rememberMe"
                   className="
                   peer/rememberMe
-                  appearance-none
+                  relative
                   h-6
                   w-6
+                  appearance-none
+                  rounded-md
                   border-[1px]
                   border-gray-900
-                  dark:border-gray-100
-                  outline-none
-                  rounded-md
-                  focus:outline-none
                   p-2
-                  relative
+                  outline-none
+                  focus:outline-none
+                  dark:border-gray-100
                 "
                 />
                 <Check
                   className="
+                  check-1
                   absolute
+                  text-blue-500
+                  text-opacity-0
+                  transition-all
+                  duration-150
                   md:top-[95]
                   md:bottom-[10]
                   md:left-4
-                  text-blue-500
-                  text-opacity-0
-                  check-1
-                  transition-all
-                  duration-150
                 "
                 />
 
@@ -131,8 +145,8 @@ export function Login() {
           </div>
         </form>
         <div>
-          <a href="">
-            <Text className="hover:underline underline-offset-2">
+          <a href="/register">
+            <Text className="underline-offset-2 hover:underline">
               Não possui uma conta? Crie agora
             </Text>
           </a>

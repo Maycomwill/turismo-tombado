@@ -13,6 +13,7 @@
     "@react-google-maps/api": "^2.18.1",
     "@rocketseat/eslint-config": "^2.1.0",
     "@types/react-burger-menu": "^2.8.3",
+    "axios": "^1.7.2",
     "clsx": "^1.2.1",
     "framer-motion": "^10.0.0",
     "localforage": "^1.10.0",
@@ -24,6 +25,7 @@
     "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
+    "sonner": "^1.4.41",
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
